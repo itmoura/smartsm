@@ -1,0 +1,83 @@
+extends layout
+
+block content
+	.index
+		.row
+			h5.green-text.left.tituloTop= title
+			.carousel.carousel-slider
+				a.carousel-item(href='#one!')
+					img.responsive-img(src='/images/index/banner.jpg')
+				a.carousel-item(href='#two!')
+					img.responsive-img(src='https://lorempixel.com/800/400/food/2')
+				a.carousel-item(href='#three!')
+					img.responsive-img(src='https://lorempixel.com/800/400/food/3')
+				a.carousel-item(href='#four!')
+					img.responsive-img(src='https://lorempixel.com/800/400/food/4')
+		section(class="container")
+			.row
+				h4.center.green-text Promoção
+				h6.red-text Supermercado 1
+				article.col.m4.s12.promocao
+					.card
+						.card-image
+							img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg')
+						.card-content.center
+							p Skol Brahma lata
+							a.green-text(href='#') R$: 4,59
+				article.col.m4.s12.promocao
+					.card
+						.card-image
+							img.responsive-img(src='/images/produtos/acougue/bife.jpg')
+						.card-content.center
+							p Bife Acem 
+							a.green-text(href='#') R$ 13,48/KG
+				article.col.m4.s12.promocao
+					.card
+						.card-image
+							img.responsive-img(src='/images/produtos/bebidas/coca-cola.png')
+						.card-content.center
+							p Coca Cola 2L
+							a.green-text(href='#') R$: 5,99
+				h6.red-text Supermercado 2
+				article.col.m4.s12.promocao
+					.card
+						.card-image
+							img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg')
+						.card-content.center
+							p Skol Brahma lata
+							a.green-text(href='#') R$: 4,59
+				article.col.m4.s12.promocao
+					.card
+						.card-image
+							img.responsive-img(src='/images/produtos/acougue/bife.jpg')
+						.card-content.center
+							p Bife Acem 
+							a.green-text(href='#') R$ 13,48/KG
+				article.col.m4.s12.promocao
+					.card
+						.card-image
+							img.responsive-img(src='/images/produtos/bebidas/coca-cola.png')
+						.card-content.center
+							p Coca Cola 2L
+							a.green-text(href='#') R$: 5,99
+		.green.download
+			div(class="container")
+				.row.center.white-text
+					br
+					h5 
+						| Proteja nosso 
+						.bold Meio Ambiente
+					span Baixe Jornal de Produtos por PDF 
+					p Mesmo conteúdo só que digital
+					div
+						.divider
+					a.downloadJornal(class="waves-effect waves-light btn-large red accent-1") Baixar
+
+
+block rodape	
+	script.
+		$('.carousel.carousel-slider').carousel({
+			fullWidth: true,
+			indicators: true
+		});
+			

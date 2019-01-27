@@ -1,0 +1,71 @@
+doctype html
+html
+	head
+		title= title
+		//- Google icon fonts
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		//- Materialize
+		link(rel="stylesheet", href="/materialize/css/materialize.min.css", media="screen,projection")
+		//- Meu CSS
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		//- Viewport
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	body
+		section(class="section menu")
+			ul#slide-out.sidenav
+				li
+					.user-view
+						.background
+							img.responsive-img(src='/images/index/supermercado.jpg' )
+						a(href='#user')
+							img.col.s12.circle.responsive-img(src='/images/index/perfil.jpg')
+						a(href='#name')
+							span.white-text.name Ítalo Moura
+						a(href='#email')
+							span.white-text.email italo.moura1201@gmail.com
+				li
+					a(href='/')
+						i.material-icons home
+						| Inicio
+				li
+					a(href='/compra')
+						i.material-icons shopping_cart
+						| Comprar
+				li
+					a(href='/lista')
+						i.material-icons view_list
+						| Lista de Compra
+				li
+					a(href='/parceiros')
+						i.material-icons store
+						| Supermercados Parceiros
+				li
+					.divider
+				li
+					a(href='/sobre')
+						i.material-icons info
+						| Sobre
+				li.sair
+					a.sairlink.waves-effect(href='#!')
+						i.material-icons logout
+						| Sair
+			a.sidenav-trigger(href='#', data-target='slide-out' class="green-text")
+				i.material-icons menu
+		block content
+	footer
+		script(src="/javascripts/jquery.js")
+		script(src='/javascripts/dataTables.min.js')
+		script(type="text/javascript" src="/materialize/js/materialize.min.js")
+		block rodape
+		.footer-copyright.red.lighten-2.white-text.center
+			.container(style="padding: 10px 0 10px 0; margin-top: 0; font-size: 15px;")
+				| © 2019 Copyright 
+				.bold IT_Company
+
+		script.
+			$(document).ready(function(){
+				$('.sidenav').sidenav();
+			});
+			function goBack() {
+				window.history.back();
+			}

@@ -1,0 +1,29 @@
+doctype html
+html
+	head
+		title= title
+		//- Google icon fonts
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		//- Materialize
+		link(rel="stylesheet", href="/materialize/css/materialize.min.css", media="screen,projection")
+		//- Meu CSS
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		//- Viewport
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	body(class="")
+		div(class="center")
+			div(class="container")
+				h1.green-text Erro 404
+				p Não conseguimos encontrar a página que você quer
+				img(src="images/batman-gif.gif", alt="Erro", sizes="200")
+				div(class="row")
+					a.btn-floating.btn-large.pulse.green(onclick="goBack()")
+						i.material-icons keyboard_return
+	footer
+		script(type="text/javascript" src="/materialize/js/materialize.min.js")
+		script.
+			function goBack() {
+				window.history.back();
+			}
+
+//- pre #{error.stack}

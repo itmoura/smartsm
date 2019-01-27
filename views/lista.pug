@@ -1,0 +1,114 @@
+extends layout
+
+block content
+    link(rel="stylesheet", href="/stylesheets/dataTables.min.css")
+    .row
+        h5.green-text.left.tituloTop= title
+    section(class="container")
+        .row.comprar
+            h6 Minha Lista
+            ul.collapsible
+                li
+                    .collapsible-header
+                        i.material-icons filter_drama
+                        | Categoria 1
+                    .collapsible-body
+                        table.highlight.tableProduto#minhaTabela(class="display" style="width:100%")
+                            thead
+                                tr
+                                th Foto
+                                th Produto
+                                th Preço
+                                th Pego
+                            tbody#myTable
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg' width="100")
+                                    td Leite Condensado Italac
+                                    td.green-text 
+                                        p.green-text R$ 3,55
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg' width="100")
+                                    td Leite Condensado Italac
+                                    td.green-text 
+                                        p.green-text R$ 3,55
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span 
+
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg' width="100")
+                                    td Leite Condensado Italac
+                                    td.green-text 
+                                        p.green-text R$ 3,55
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span
+                                
+
+                li
+                    .collapsible-header
+                        i.material-icons place
+                        | Categoria 2
+                    .collapsible-body
+                        span Lorem ipsum dolor sit amet.
+                li
+                    .collapsible-header
+                        i.material-icons whatshot
+                        | Categoria 3
+                    .collapsible-body
+                        span Lorem ipsum dolor sit amet.
+
+
+    .white
+        section(class="container")
+            .row
+                .col.s12.m6
+                    .card
+                        .card-image
+                            img(src='/images/supermercado/bonifacio.jpg')
+                            span.card-title.black-text(style="font-weight: bold") Boas Compras
+                        .card-content
+                            p Você escolheu Supermercado Bonifácio
+                            p valor: 
+                                span.green-text.finalizarCompraB R$ 87.69
+                            p.green-text VOCÊ É CLIENTE VIP DESSE LOCAL
+                            p(style="font-size: 11px; color: #ccc; margin-top: 10px;") *Sendo VIP, você tem o direito de pedir a compra diretamente do app
+                        .card-action
+                            .col.s6.right
+                                a(class="waves-effect waves-light btn-small green") Entrega
+                            //- .col.s6.center
+                            //-     a(class="waves-effect waves-light btn-small" href="/lista") Salvar
+
+
+
+
+block rodape
+    script.
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+            $('#minhaTabela').DataTable({
+                "pageLength": 4,
+                "language": {
+                    "lengthMenu": "Suerp IT - Busca",
+                    "search": "Buscar Produto",
+                    "zeroRecords": "Nada encontrado",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Nenhum registro disponível",
+                    "infoFiltered": "(filtrado de _MAX_ registros no total)"
+                }
+            });
+
+            
+        });
