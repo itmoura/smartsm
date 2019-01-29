@@ -4,6 +4,7 @@ body {
 }
 .bold {font-weight: bold}
 .hidden {display: none;}
+.link {cursor: pointer; color: #000000;}
 
 /* MENU */
 .menu {margin-left: 20px; position: absolute; top: 3px; }
@@ -30,7 +31,11 @@ body {
 /* TABELA */
 .collapsible-body {padding-left: 0; padding-right: 0;}
 /* BOTÃO + E - */
-.btnADDComprar {border: none; margin-left: 4px;}
+.btnADDComprar {border: none; margin-left: 2px; width: 11px;}
 .qntdP {margin-bottom: 4px; margin-top: 0; width: 15px;}
 .disabledButton {background-color: #cccccc !important;}
 .supermercadosFim {display: none;}
+
+/* MODAL */
+.modalCss p.grey-text {margin: 0;}
+.modalCss .oculta {display: none;}

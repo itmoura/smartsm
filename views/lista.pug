@@ -13,62 +13,229 @@ block content
                         i.material-icons filter_drama
                         | Categoria 1
                     .collapsible-body
-                        table.highlight.tableProduto#minhaTabela(class="display" style="width:100%")
+                        table.highlight.tableProduto.minhaTabela(class="display" style="width:100%")
                             thead
                                 tr
                                 th Foto
                                 th Produto
                                 th Preço
-                                th Pego
-                            tbody#myTable
+                                th.add Pego
+                            tbody
                                 tr
                                     td 
-                                        img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg' width="100")
-                                    td Leite Condensado Italac
+                                        img.responsive-img(src='/images/produtos/nao_pereciveis/arroz.jpg' width="100")
+                                    td 
+                                        a.link.modal-trigger(href="#modal1") Arroz Ilustre
                                     td.green-text 
-                                        p.green-text R$ 3,55
+                                        p.green-text R$ 11.49
                                     td
                                         p
                                             label
                                                 input(type='checkbox')
                                                 span
+                                    //- MODAL
+                                    .modal#modal1.modalCss
+                                        .modal-content
+                                            .center
+                                                h5 Arroz Ilustre
+                                                img.responsive-img(src='/images/produtos/nao_pereciveis/arroz.jpg' width="100")
+                                            p.grey-text Tradicional Tipo 1
+                                            p.grey-text 5kg
+                                            br
+                                            a.exibirInfo(href="#!") Exibir Informações Nutritivas
+                                            .nutricao.oculta
+                                                p Aqui vai Informações Nutritivas do produto
+                                        .modal-footer
+                                            a(href="#!" class="modal-close waves-effect waves-green btn-flat ocultaFecha") Fechar 
+                                    //- FIM MODAL 
                                 tr
                                     td 
-                                        img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg' width="100")
-                                    td Leite Condensado Italac
-                                    td.green-text 
-                                        p.green-text R$ 3,55
-                                    td
-                                        p
-                                            label
-                                                input(type='checkbox')
-                                                span 
-
-                                tr
+                                        img.responsive-img(src='/images/produtos/nao_pereciveis/macarrao.png' width="100")
                                     td 
-                                        img.responsive-img(src='/images/produtos/bebidas/brahma-latao.jpg' width="100")
-                                    td Leite Condensado Italac
+                                        a.link.modal-trigger(href="#modal2") Macarrão c/ ovos Ilustre
                                     td.green-text 
-                                        p.green-text R$ 3,55
+                                        p.green-text R$ 2.09
                                     td
                                         p
                                             label
                                                 input(type='checkbox')
                                                 span
-                                
+                                    //- MODAL
+                                    .modal#modal2.modalCss
+                                        .modal-content
+                                            .center
+                                                h5 Macarrão c/ ovos Ilustre
+                                                img.responsive-img(src='/images/produtos/nao_pereciveis/macarrao.png' width="100")
+                                            p.grey-text Penne, Parafuso, Padre
+                                            p.grey-text Nosso e Espaguete
+                                            p.grey-text 500g
+                                            br
+                                            a.exibirInfo(href="#!") Exibir Informações Nutritivas
+                                            .nutricao.oculta
+                                                p Aqui vai Informações Nutritivas do produto
+                                        .modal-footer
+                                            a(href="#!" class="modal-close waves-effect waves-green btn-flat ocultaFecha") Fechar 
+                                    //- FIM MODAL
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/nao_pereciveis/feijao.jpg' width="100")
+                                    td 
+                                        a.link.modal-trigger(href="#modal3") Feijão DuDé
+                                    td.green-text 
+                                        p.green-text R$ 4.69
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span
+                                    //- MODAL
+                                    .modal#modal3.modalCss
+                                        .modal-content
+                                            .center
+                                                h5 Feijão DuDé
+                                                img.responsive-img(src='/images/produtos/nao_pereciveis/feijao.jpg' width="100")
+                                            p.grey-text Carioca
+                                            p.grey-text 1kg
+                                            br
+                                            a.exibirInfo(href="#!") Exibir Informações Nutritivas
+                                            .nutricao.oculta
+                                                p Aqui vai Informações Nutritivas do produto
+                                        .modal-footer
+                                            a(href="#!" class="modal-close waves-effect waves-green btn-flat ocultaFecha") Fechar 
+                                    //- FIM MODAL                                
 
                 li
                     .collapsible-header
                         i.material-icons place
-                        | Categoria 2
+                        | Mercearia
                     .collapsible-body
-                        span Lorem ipsum dolor sit amet.
+                        table.highlight.tableProduto.minhaTabela(class="display" style="width:100%")
+                            thead
+                                tr
+                                th Foto
+                                th Produto
+                                th Preço
+                                th.add Pego
+                            tbody
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/mercearia/bis.jpg' width="100")
+                                    td 
+                                        a.link.modal-trigger(href="#modal4") Chocolate Bis | Lacta Black
+                                    td.green-text 
+                                        p.green-text R$ 3.58
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span
+                                    //- MODAL
+                                    .modal#modal4.modalCss
+                                        .modal-content
+                                            .center
+                                                h5 Chocolate Bis 
+                                                h5 Lacta Black
+                                                img.responsive-img(src='/images/produtos/mercearia/bis.jpg' width="100")
+                                            p.grey-text 100.8g
+                                            br
+                                            a.exibirInfo(href="#!") Exibir Informações Nutritivas
+                                            .nutricao.oculta
+                                                p Aqui vai Informações Nutritivas do produto
+                                        .modal-footer
+                                            a(href="#!" class="modal-close waves-effect waves-green btn-flat ocultaFecha") Fechar 
+                                    //- FIM MODAL
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/mercearia/trink.jpg' width="100")
+                                    td 
+                                        a.link.modal-trigger(href="#modal5") Refresco em pó Trink
+                                    td.green-text 
+                                        p.green-text R$ 0.78
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span
+                                    //- MODAL
+                                    .modal#modal5.modalCss
+                                        .modal-content
+                                            .center
+                                                h5 Refresco em pó Trink
+                                                img.responsive-img(src='/images/produtos/mercearia/trink.jpg' width="100")
+                                            p.grey-text Sabores - 25g
+                                            br
+                                            a.exibirInfo(href="#!") Exibir Informações Nutritivas
+                                            .nutricao.oculta
+                                                p Aqui vai Informações Nutritivas do produto
+                                        .modal-footer
+                                            a(href="#!" class="modal-close waves-effect waves-green btn-flat ocultaFecha") Fechar 
+                                    //- FIM MODAL
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/mercearia/tortuguita.jpg' width="100")
+                                    td 
+                                        a.link.modal-trigger(href="#modal6") Biscoito Recheado Tortuguita
+                                    td.green-text 
+                                        p.green-text R$ 1.45
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span
+                                    //- MODAL
+                                    .modal#modal6.modalCss
+                                        .modal-content
+                                            .center
+                                                h5 Biscoito Recheado Tortuguita
+                                                img.responsive-img(src='/images/produtos/mercearia/tortuguita.jpg' width="100")
+                                            p.grey-text Chocolate, Brigadeiro e Morango
+                                            p.grey-text 130g
+                                            br
+                                            a.exibirInfo(href="#!") Exibir Informações Nutritivas
+                                            .nutricao.oculta
+                                                p Aqui vai Informações Nutritivas do produto
+                                        .modal-footer
+                                            a(href="#!" class="modal-close waves-effect waves-green btn-flat ocultaFecha") Fechar 
+                                    //- FIM MODAL
                 li
                     .collapsible-header
                         i.material-icons whatshot
-                        | Categoria 3
+                        | Açougue
                     .collapsible-body
-                        span Lorem ipsum dolor sit amet.
+                        table.highlight.tableProduto.minhaTabela(class="display" style="width:100%")
+                            thead
+                                tr
+                                th Foto
+                                th Produto
+                                th Preço
+                                th.add Pego
+                            tbody
+                                tr
+                                    td 
+                                        img.responsive-img(src='/images/produtos/acougue/alcatra.png' width="100")
+                                    td 
+                                        a.link.modal-trigger(href="#modal7") Alcatra com Maminha - kg
+                                    td.green-text 
+                                        p.green-text R$ 23.98
+                                    td
+                                        p
+                                            label
+                                                input(type='checkbox')
+                                                span
+                                    //- MODAL
+                                    .modal#modal7.modalCss
+                                        .modal-content
+                                            .center
+                                                h5 Alcatra com Maminha
+                                                img.responsive-img(src='/images/produtos/acougue/alcatra.png' width="100")
+                                            p.grey-text por kg
+                                            br
+                                            a.exibirInfo(href="#!") Exibir Informações Nutritivas
+                                            .nutricao.oculta
+                                                p Aqui vai Informações Nutritivas do produto
+                                        .modal-footer
+                                            a(href="#!" class="modal-close waves-effect waves-green btn-flat ocultaFecha") Fechar 
+                                    //- FIM MODAL
 
 
     .white
@@ -98,7 +265,11 @@ block rodape
     script.
         $(document).ready(function(){
             $('.collapsible').collapsible();
-            $('#minhaTabela').DataTable({
+
+            /* MODAL */
+            $('.modal').modal();
+            
+            $('.minhaTabela').DataTable({
                 "pageLength": 4,
                 "language": {
                     "lengthMenu": "Suerp IT - Busca",
