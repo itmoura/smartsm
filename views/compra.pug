@@ -294,7 +294,7 @@ block content
                 .col.s12.m6
                     .card
                         .card-image
-                            img(src='/images/supermercado/bonifacio.jpg')
+                            img(src='/images/supermercado/qualquer.jpg')
                             span.card-title 
                         .card-content
                             p valor: 
@@ -388,11 +388,11 @@ block rodape
             });
 
             $( ".finalizar" ).click(function() {
-                var bonifacio = $("#carrinhoMenor").text();
-                if(bonifacio != 0){
+                var economizar = $("#carrinhoMenor").text();
+                if(economizar != 0){
                     $('.collapsible').collapsible('close');
                     //- alert($("#carrinhoMaior").text());
-                    $(".finalizarCompraB").text("R$ "+ bonifacio);
+                    $(".finalizarCompraB").text("R$ "+ economizar);
                     var qualquer = $("#carrinhoMaior").text();
                     $(".finalizarCompraC").text("R$ "+ qualquer);
                     $('.supermercadoAddClass').addClass('supermercadosFim');
